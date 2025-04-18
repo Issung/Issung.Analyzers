@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-namespace Issung.Analyzers
+namespace Sog.Analyzers
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -45,7 +45,7 @@ namespace Issung.Analyzers
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Issung.Analyzers.Resources", typeof(Resources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Sog.Analyzers.Resources", typeof(Resources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

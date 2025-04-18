@@ -1,13 +1,13 @@
 ﻿/*using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VerifyCS = Issung.Analyzers.Test.CSharpCodeFixVerifier<
-    Issung.Analyzers.IssungAnalyzersAnalyzer,
-    Issung.Analyzers.IssungAnalyzersCodeFixProvider>;
+using VerifyCS = Sog.Analyzers.Test.CSharpCodeFixVerifier<
+    Sog.Analyzers.SogAnalyzersAnalyzer,
+    Sog.Analyzers.SogAnalyzersCodeFixProvider>;
 
-namespace Issung.Analyzers.Test
+namespace Sog.Analyzers.Test
 {
     [TestClass]
-    public class IssungAnalyzersUnitTest
+    public class SogAnalyzersUnitTest
     {
         //No diagnostics expected to show up
         [TestMethod]
@@ -52,7 +52,7 @@ namespace Issung.Analyzers.Test
         }
     }";
 
-            var expected = VerifyCS.Diagnostic("IssungAnalyzers").WithLocation(0).WithArguments("TypeName");
+            var expected = VerifyCS.Diagnostic("SogAnalyzers").WithLocation(0).WithArguments("TypeName");
             await VerifyCS.VerifyCodeFixAsync(test, expected, fixtest);
         }
     }

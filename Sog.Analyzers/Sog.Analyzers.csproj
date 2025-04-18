@@ -3,11 +3,10 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<IsPackable>false</IsPackable>
-		<LangVersion>latest</LangVersion>
-		
 
 		<!-- Avoid ID conflicts with the package project. -->
 		<PackageId>*$(MSBuildProjectFile)*</PackageId>
+		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 	</PropertyGroup>
 
 	<ItemGroup>

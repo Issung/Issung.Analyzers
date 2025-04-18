@@ -3,13 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issung.Analyzers", "Issung.Analyzers\Issung.Analyzers.csproj", "{A0A1DCBA-99F7-4E61-BFFC-7A76606C210F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sog.Analyzers", "Sog.Analyzers\Sog.Analyzers.csproj", "{A0A1DCBA-99F7-4E61-BFFC-7A76606C210F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issung.Analyzers.Package", "Issung.Analyzers.Package\Issung.Analyzers.Package.csproj", "{DD41D298-6659-44A1-94C0-A689F1DE64E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sog.Analyzers.Package", "Sog.Analyzers.Package\Sog.Analyzers.Package.csproj", "{DD41D298-6659-44A1-94C0-A689F1DE64E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issung.Analyzers.Test", "Issung.Analyzers.Test\Issung.Analyzers.Test.csproj", "{4D1C9A74-4177-4CB1-B817-2C7DEB9AB37A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sog.Analyzers.Test", "Sog.Analyzers.Test\Sog.Analyzers.Test.csproj", "{4D1C9A74-4177-4CB1-B817-2C7DEB9AB37A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issung.Analyzers.Vsix", "Issung.Analyzers.Vsix\Issung.Analyzers.Vsix.csproj", "{9359B280-01A5-4A7E-B565-D34EBA94E327}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sog.Analyzers.Vsix", "Sog.Analyzers.Vsix\Sog.Analyzers.Vsix.csproj", "{9359B280-01A5-4A7E-B565-D34EBA94E327}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		LICENSE = LICENSE
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F344B857-3E1D-4764-8668-0ECB1BCCC195}"
+	ProjectSection(SolutionItems) = preProject
+		publish.yml = publish.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +51,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
+		{F344B857-3E1D-4764-8668-0ECB1BCCC195} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59D8534F-D24F-47D3-A4D1-FAACFE113667}

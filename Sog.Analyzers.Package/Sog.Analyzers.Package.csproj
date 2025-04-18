@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>Issung</Authors>
+		<PackageId>Sog.Analyzers</PackageId>
+		<Description>General purpose analyzers to aid with C# development.</Description>
+		<PackageLicenseUrl>https://github.com/Issung/Sog.Analyzers/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageIconUrl>https://avatars.githubusercontent.com/u/22212465</PackageIconUrl>
+		<RepositoryUrl>https://github.com/Issung/Sog.Analyzers</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/Issung/Sog.Analyzers</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+		<PackageTags>Sog.Analyzers, analyzers</PackageTags>
+		<DevelopmentDependency>true</DevelopmentDependency>
+		<NoPackageAnalysis>true</NoPackageAnalysis>
+
+		<!-- The package version is picked up from the git tag in the GitHub publish workflow. -->
+		<!--<PackageVersion>1.0.0</PackageVersion>-->
+
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Sog.Analyzers\Sog.Analyzers.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<Target Name="_AddAnalyzersToOutput">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="$(OutputPath)\Sog.Analyzers.dll" PackagePath="analyzers/dotnet/cs" />
+		</ItemGroup>
+	</Target>
+
+</Project>
