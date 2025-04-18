@@ -28,6 +28,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Sog.Analyzers.Types\Sog.Analyzers.Types.csproj" />
 		<ProjectReference Include="..\Sog.Analyzers\Sog.Analyzers.csproj" />
 	</ItemGroup>
 

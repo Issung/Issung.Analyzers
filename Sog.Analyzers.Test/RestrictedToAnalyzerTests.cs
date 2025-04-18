@@ -63,7 +63,7 @@ public class RestrictedToAnalyzerTests
         {
             TestCode = code,
             ExpectedDiagnostics = {
-                DiagnosticResult.CompilerError("RTA001")
+                DiagnosticResult.CompilerError("SOG001")
                     .WithLocation(0)
                     .WithArguments("MyAttribute", "NotAllowedClass")
             },
@@ -104,7 +104,7 @@ public class RestrictedToAnalyzerTests
         {
             TestCode = code,
             ExpectedDiagnostics = {
-                DiagnosticResult.CompilerError("RTA001")
+                DiagnosticResult.CompilerError("SOG001")
                     .WithLocation(0)
                     .WithArguments("MyAttribute", "BadClass")
             },
@@ -121,7 +121,7 @@ public class RestrictedToAnalyzerTests
 
         await test.RunAsync();
 
-        //var expected = VerifyCS.Diagnostic("RTA001")
+        //var expected = VerifyCS.Diagnostic("SOG001")
         //    .WithLocation(0)
         //    .WithArguments("MyAttribute", "BadClass");
         //
